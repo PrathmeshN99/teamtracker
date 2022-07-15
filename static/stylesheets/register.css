@@ -3,6 +3,8 @@
     --col2: #2B2B2F;
     --col3: #ffa444;
     --col3: #728cf3;
+    --col3: #607dee;
+    --col4: #e3e9ff;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -34,6 +36,7 @@ body{
     justify-content: center;
     align-items: center;
     /* animation: tr 0.3s; */
+    background: var(--col4);
 }
 @keyframes tr {
     from{
@@ -48,27 +51,28 @@ body{
     }
 }
 .body{
-    width: 95%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    background: url("/static/images/signup2.jpg");
+    background: url("/static/images/signup2.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom right;
+    background-size: 60%;
+    background-position: center right;
+    /* background: red; */
     
 }
 .body .part{
-    width: 30%;
+    width: 40%;
     height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: #F3F3F3;
-    background: var(--col1);
+    background: transparent;
+    /* background: var(--col1); */
     color: var(--col2);
     /* border-radius: 20px; */
     /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
@@ -76,6 +80,9 @@ body{
     border-left: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    border: none;
+    /* border-right: 1.5px solid var(--col3);
+    border-radius: 0; */
 }
 .body .part .heading{
     font-size: 40px;
@@ -83,7 +90,7 @@ body{
     color: var(--col3);
 }
 .body .part form{
-    width: 80%;
+    width: 85%;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -143,16 +150,17 @@ body{
 .body .part form .buttonfield button{
     padding: 9px 23px;
     color: var(--col1);
-    background: var(--col2);
-    border: 0px solid var(--col2);
+    background: var(--col3);
+    border: 1.5px solid transparent;
     border-radius: 100px;
     margin: 10px 0px;
     cursor: pointer;
     width: 35%;
 }
 .body .part form .buttonfield button:hover{
-    background: var(--col3);
-    color: var(--col1);
+    background: transparent;
+    color: var(--col3);
+    border-color: var(--col3);
     transition: all;
     transition-duration: 0.2s;
 }
