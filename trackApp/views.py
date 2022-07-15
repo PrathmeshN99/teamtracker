@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
-
+from django.contrib import messages
 
 def register(request):
     if request.method == 'POST':
@@ -45,23 +45,24 @@ def login(request):
     else:
         return render(request,'login.html')
 
+@login_required
 def home(request):
     return render(request,'home.html')
 
-
-
+@login_required
 def profile(request):
     # def sample_view(request):
     current_user = request.user
     print(current_user)
     print(type(current_user))
     print(current_user)
-    
+
     context = {
         'username': current_user.username
     }
 
     return render(request,'profile.html', context=context)
+
 
 def quickguide(request):
     return render(request,'quickguide.html')
@@ -69,3 +70,7 @@ def quickguide(request):
 def aboutapp(request):
     return render(request,'aboutapp.html')
 
+def logout_view(request):
+    logout(request)
+    messages.success(request,'Logged out')
+    return redirect('/')
