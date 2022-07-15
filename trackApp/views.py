@@ -3,6 +3,7 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib import messages
+from .models import Project
 
 def register(request):
     if request.method == 'POST':
@@ -56,11 +57,9 @@ def profile(request):
     print(current_user)
     print(type(current_user))
     print(current_user)
-
     context = {
         'username': current_user.username
     }
-
     return render(request,'profile.html', context=context)
 
 
@@ -74,3 +73,20 @@ def logout_view(request):
     logout(request)
     messages.success(request,'Logged out')
     return redirect('/')
+
+def createProject(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        user = request.user
+        content = request.POST['content']
+        project = Project.objects.create(title=title,user=user,content=content)
+        project.save()
+        return redirect('/myProjects.html')
+    return render(request,'createProject.html')
+
+def joinProject(request):
+    return render(request,'joinProject.html')
+
+def myProjects(request):
+    return render(request,'myProjects.html')
+
