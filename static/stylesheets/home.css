@@ -1,0 +1,25 @@
+
+html *{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: red;
+    height: 10%;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

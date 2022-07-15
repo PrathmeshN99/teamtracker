@@ -2,13 +2,14 @@
     --col1: #FFFFFF;
     --col2: #2B2B2F;
     --col3: #ffa444;
+    --col3: #728cf3;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 ::placeholder, input{
     font-family: 'Montserrat', sans-serif;
 }
-
 
 html *{
     margin:0;
@@ -16,9 +17,14 @@ html *{
 }
 .mainheading{
     position:absolute;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    right: 0px;
     font-size: 35px;
+    color: var(--col1);
+    background-color: var(--col3);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
 }
 body{
     width: 100vw;
@@ -27,18 +33,31 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: url("/static/images/intro2.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom left;
+    /* animation: tr 0.3s; */
+}
+@keyframes tr {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+        /* width: 0vw; */
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        /* width: 100vw; */
+    }
 }
 .body{
     width: 95%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
+    background: url("/static/images/signup2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
     
 }
 .body .part{
@@ -54,9 +73,9 @@ body{
     /* border-radius: 20px; */
     /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
     border: 1.5px solid var(--col3);
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .body .part .heading{
     font-size: 40px;
@@ -65,26 +84,29 @@ body{
 }
 .body .part form{
     width: 80%;
-    height: 50%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .body .part form .inputfield{
-    width: 90%;
+    width: 95%;
     /* height: 15%; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
+    /* border: 2px solid black; */
+    margin: 7px 0px;
+    
 }
 .body .part form .inputfield label{
-    font-size: 17px;
+    font-size: 14px;
 }
 .body .part form .inputfield input{
     height: 35px;
-    width: 90%;
+    width: 97%;
     padding-left: 10px;
     border: 0px;
     border-bottom: 1px solid var(--col2);
@@ -94,7 +116,24 @@ body{
     outline: none;
     border-color: var(--col3);
 }
+.body .part form .inputfield .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: red; */
+}
+.body .part form .inputfield .row input{
+    width: 45%;
+}
 .body .part form .buttonfield{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.body .part form .buttonfield .row{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -118,7 +157,6 @@ body{
     transition-duration: 0.2s;
 }
 .body .part form .inputfield p{
-    margin-top: 20px;
     width: 100%;
     text-align: center;
 }

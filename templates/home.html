@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,13 +7,91 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <title>OneTracker | Home</title>
+        <link rel="stylesheet" href="{% static 'stylesheet/home.css' %}">
+        <title>OneTracker | Dashboard </title>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+        <style>
+            
+:root{
+    --col1: #FFFFFF;
+    --col2: #2B2B2F;
+    --col3: #ffa444;
+    font-family: 'Montserrat', sans-serif;
+}
+html *{
+padding: 0px;
+margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.navbar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: var(--col2);
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navbarHeading{
+    padding-left: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--col1);
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--col1);
+    padding: 5px 15px;
+    border-radius: 100px;
+    transition: all;
+    transition-duration: 0.2s;
+    /* border-bottom: 1.5px solid transparent; */
+}
+.navbar ul li a:hover{
+    background: var(--col1);
+    color: var(--col2);
+    /* border-color: var(--col1); */
+}
+
+        </style>
     </head>
     <body>
         
+        <div class="navbar">
+            <a href="" class="navbarHeading">
+                OneTracker
+            </a>
+            <ul>
+                <li> <a href=""> DashBoard </a></li>
+                <li> <a href=""> Team </a></li>
+                <li> <a href=""> Profile </a></li>
+                <li> <a href=""> Quick Guide </a></li>
+                <li> <a href=""> Log Out </a></li>
+            </ul>
+        </div>
 
-        <h1>Hello User</h1>
+
+        <!-- <h1>Hello User</h1> -->
         
         <script src="" async defer></script>
     </body>

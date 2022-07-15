@@ -9,10 +9,21 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'stylesheets/login.css' %}">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
     </head>
     <body>
+        <div class="mainheading">
+            OneTracker
+        </div>
 
-        <div class="body">
+        <div class="body" >
+
             
             <div class="part">
 
@@ -27,18 +38,19 @@
                     {% csrf_token %}
                     <div class="inputfield">
                         <label for="username">Username</label>
-                        <input type="text" placeholder="Type here" id="username" name="username"><br>
+                        <input type="text" required placeholder="Type here" id="username" name="username"><br>
                     </div>
                     <div class="inputfield">
                         <label for="username">Password</label>
-                        <input type="password" placeholder="Type here" id="password" name="password" ><br>
+                        <input type="password" required placeholder="Type here" id="password" name="password" ><br>
                     </div>
+                    <br>
                     <div class="buttonfield inputfield">
-                        <button type="submit">LOGIN</button>
+                        <button type="submit">SIGN IN</button>
                         <button type="reset">RESET</button>
                     </div>
                     <div class="inputfield">
-                        <p>Don't have an account yet? <a href="register">Sign up</a></p>
+                        <p>Don't have an account yet? <br> <a class="signup" href="register">Sign Up</a></p>
                     </div>
                 </form>
 
