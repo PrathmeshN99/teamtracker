@@ -74,7 +74,7 @@ def logout_view(request):
     messages.success(request,'Logged out')
     return redirect('/')
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 def createproject(request):
     
     if request.method == 'POST':
@@ -93,7 +93,7 @@ def joinproject(request):
 
 def currentprojects(request):
     return render(request,'currentprojects.html')
-=======
+# =======
 def createProject(request):
     if request.method == 'POST':
         title = request.POST['title']
@@ -109,5 +109,5 @@ def joinProject(request):
 
 def myProjects(request):
     return render(request,'myProjects.html')
->>>>>>> 1e1f36778459fd90ff9cf122691b8aa021c2e867
+# >>>>>>> 1e1f36778459fd90ff9cf122691b8aa021c2e867
 
