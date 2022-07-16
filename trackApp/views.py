@@ -47,3 +47,25 @@ def login(request):
 
 def home(request):
     return render(request,'home.html')
+
+
+
+def profile(request):
+    # def sample_view(request):
+    current_user = request.user
+    print(current_user)
+    print(type(current_user))
+    print(current_user)
+    
+    context = {
+        'username': current_user.username
+    }
+
+    return render(request,'profile.html', context=context)
+
+def quickguide(request):
+    return render(request,'quickguide.html')
+
+def aboutapp(request):
+    return render(request,'aboutapp.html')
+
