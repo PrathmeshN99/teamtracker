@@ -119,13 +119,16 @@ body{
     margin: 10px 0px;
     cursor: pointer;
     width: 30%;
-}
-.body .part form .buttonfield button:hover{
-    background: transparent;
-    color: var(--col3);
     transition: all;
     transition-duration: 0.2s;
-    border-color: var(--col3);
+}
+.body .part form .buttonfield button:hover{
+    /* background: transparent;
+    color: var(--col3);
+    border-color: var(--col3); */
+}
+.body .part form .buttonfield button:active{
+    transform: scale(0.97);
 }
 .body .part form .inputfield p{
     margin-top: 20px;

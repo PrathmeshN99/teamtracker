@@ -74,3 +74,23 @@ def logout_view(request):
     logout(request)
     messages.success(request,'Logged out')
     return redirect('/')
+
+def createproject(request):
+    
+    if request.method == 'POST':
+        
+        return render(request,'currentprojects.html')
+
+    return render(request,'createproject.html')
+
+def joinproject(request):
+    
+    if request.method == 'POST':
+        
+        return render(request,'currentprojects.html')
+        
+    return render(request,'joinproject.html')
+
+def currentprojects(request):
+    return render(request,'currentprojects.html')
+

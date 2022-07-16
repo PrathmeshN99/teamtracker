@@ -10,4 +10,7 @@ urlpatterns = [
     path('aboutapp',views.aboutapp,name='aboutapp'),
     path('quickguide',views.quickguide,name='quickguide'),
     path('logout',views.logout_view,name="logout_view"),
+    path('createproject',views.createproject,name="createproject"),
+    path('joinproject',views.joinproject,name="joinproject"),
+    path('currentprojects',views.currentprojects,name="currentprojects"),
 ]
